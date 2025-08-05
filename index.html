@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AMJ Digital Vault</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&enable-funding=card&currency=USD"></script>
   <style>
     body {
       margin: 0;
@@ -21,13 +22,9 @@
       padding: 25px;
       box-shadow: 0 0 20px #00ffff55;
     }
-    h1 {
+    h1, h2 {
       color: #00ffff;
       margin-bottom: 10px;
-    }
-    h2 {
-      margin: 20px 0 10px;
-      color: #00ffff;
     }
     ul {
       text-align: left;
@@ -41,8 +38,7 @@
       color: lime;
       font-weight: bold;
     }
-    iframe {
-      border: none;
+    #paypal-container {
       margin-top: 20px;
     }
     .footer {
@@ -69,14 +65,14 @@
     <h2>AMJ DIGITAL VAULT LAUNCH PACKAGE</h2>
     <h2>$997.00 USD</h2>
 
-    <!-- PayPal Button Embed (ID: XC7SGX25U6EGE) -->
-    <iframe 
-      src="https://www.paypal.com/buttons/smart?button_id=XC7SGX25U6EGE" 
-      width="100%" 
-      height="300" 
-      title="PayPal Checkout Button"
-      allow="payment">
-    </iframe>
+    <!-- PayPal Hosted Button -->
+    <div id="paypal-container"></div>
+
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "XC7SGX25U6EGE"
+      }).render("#paypal-container");
+    </script>
 
     <div class="footer">Something went wrong? Refresh and try again.</div>
   </div>
