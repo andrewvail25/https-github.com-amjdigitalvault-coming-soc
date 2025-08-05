@@ -3,75 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AMJ Digital Vault</title>
+  <title>Vault Key Checkout</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #00ffff;
-    }
-    .container {
+      background: #111;
+      color: #f5f5f5;
+      text-align: center;
       padding: 2rem;
-      max-width: 600px;
-      margin: auto;
     }
-    h1, h2, h3 {
-      color: #00ffff;
-      text-align: center;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 1rem 0;
+    p {
       font-size: 1.1rem;
-      color: #00ffff;
+      margin-bottom: 2rem;
     }
-    li::before {
-      content: '✅ ';
-      color: #adff2f;
-    }
-    .price {
-      font-size: 1.5rem;
-      text-align: center;
-      margin-top: 1rem;
-    }
-    #paypal-button-container {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    @media screen and (max-width: 600px) {
-      .container {
-        padding: 1rem;
-      }
+    #paypal-container {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>The $997 Launch Package Includes:</h1>
-    <ul>
-      <li>Done-for-you business setup</li>
-      <li>Automated sales engine</li>
-      <li>Passive affiliate income system</li>
-      <li>Preloaded digital products ready to sell</li>
-      <li>Smart Vault Access System — <span style="color: lime;">LIVE NOW</span></li>
-      <li>Tools, training, and templates</li>
-    </ul>
 
-    <h2>AMJ DIGITAL VAULT LAUNCH PACKAGE</h2>
-    <div class="price">$997.00 USD</div>
+  <h1>Unlock The Vault 🔑</h1>
+  <p>Get instant access to the entire Vault Key system now.</p>
 
-    <div id="paypal-button-container"></div>
-  </div>
+  <!-- PayPal Button Container -->
+  <div id="paypal-container"></div>
 
-  <script src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&enable-funding=card&currency=USD"></script>
+  <!-- PayPal SDK with your live client ID -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=AaJWaZGobv1A7yyIkIVBIvGtEVDYrYeWUTHqHBP-LiDxgUEZ3WIC8-hvfxknf8eI2NJJCU8Wbbv3YBnkN&components=hosted-buttons&currency=USD">
+  </script>
+
+  <!-- PayPal Button Render Script -->
   <script>
     paypal.HostedButtons({
-      hostedButtonId: "XC7SGX25U6EGE"
-    }).render("#paypal-button-container");
+      hostedButtonId: 'XFBRVKMKCLE2Y'
+    }).render('#paypal-container');
   </script>
+
 </body>
 </html>
