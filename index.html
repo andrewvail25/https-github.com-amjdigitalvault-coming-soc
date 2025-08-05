@@ -1,53 +1,29 @@
-<section>
-  <h2 style="color:#00f5d4;">The $997 Launch Package Includes:</h2>
-  <ul style="list-style:none; padding-left:0;">
-    <li>✅ Done-for-you business setup</li>
-    <li>✅ Automated sales engine</li>
-    <li>✅ Passive affiliate income system</li>
-    <li>✅ Preloaded digital products ready to sell</li>
-    <li>✅ Smart Vault Access System — <strong style="color:lime;">LIVE NOW</strong></li>
-    <li>✅ Tools, training, and templates</li>
-  </ul>
+<section style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif; color: #00ffe1; background-color: #000;">
+  <h1 style="font-size: 28px; font-weight: bold; text-align: center; margin-bottom: 10px;">AMJ Digital Vault</h1>
+  <p style="text-align: center; font-size: 16px;">Turn your notepad into a real online business.</p>
 
-  <h3 style="color:#00f5d4;">AMJ DIGITAL VAULT LAUNCH PACKAGE<br>$997.00 USD</h3>
+  <div style="background-color: #111; padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <h2 style="font-size: 22px; color: #00ffe1; text-align: center; margin-bottom: 20px;">The $997 Launch Package Includes:</h2>
+    <ul style="list-style: none; padding-left: 0; color: white; font-size: 16px;">
+      <li>✅ Done-for-you business setup</li>
+      <li>✅ Automated sales engine</li>
+      <li>✅ Passive affiliate income system</li>
+      <li>✅ Preloaded digital products ready to sell</li>
+      <li>✅ Smart Vault Access System — <span style="color: #00ff33; font-weight: bold;">LIVE NOW</span></li>
+      <li>✅ Tools, training, and templates</li>
+    </ul>
+  </div>
 
-  <!-- PayPal Button Start -->
-  <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=buttons&enable-funding=venmo&currency=USD">
-  </script>
+  <h2 style="text-align: center; margin-top: 30px; font-size: 20px; color: #00ffe1;">AMJ DIGITAL VAULT LAUNCH PACKAGE<br>$997.00 USD</h2>
 
-  <div id="paypal-button-container"></div>
+  <!-- PAYPAL BUTTONS -->
+  <div id="paypal-button-container" style="margin-top: 20px;"></div>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&enable-funding=venmo,paylater,card&currency=USD"></script>
 
   <script>
-    paypal.Buttons({
-      style: {
-        shape: 'pill',
-        color: 'gold',
-        layout: 'vertical',
-        label: 'paypal'
-      },
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: '997.00'
-            },
-            description: "AMJ Digital Vault Launch Package"
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          alert('Transaction completed by ' + details.payer.name.given_name + '!');
-          // Add success redirect or logic here
-        });
-      },
-      onError: function (err) {
-        console.error(err);
-        alert('Something went wrong. Please try again or contact support.');
-      }
-    }).render('#paypal-button-container');
+    paypal.HostedButtons({
+      hostedButtonId: "E4B8XGSD2C26E"
+    }).render("#paypal-button-container");
   </script>
-  <!-- PayPal Button End -->
-
 </section>
