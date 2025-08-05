@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AMJ Digital Vault</title>
-  <script src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=buttons,funding-eligibility&enable-funding=card&currency=USD"></script>
   <style>
     body {
       background-color: black;
@@ -14,7 +13,6 @@
       margin: 0;
       padding: 20px;
     }
-
     .container {
       max-width: 500px;
       margin: auto;
@@ -23,33 +21,25 @@
       border-radius: 12px;
       box-shadow: 0 0 15px cyan;
     }
-
-    h1 {
-      color: #00ffff;
-    }
-
+    h1 { color: #00ffff; }
     ul {
       list-style-type: none;
       padding: 0;
       text-align: left;
     }
-
     ul li::before {
       content: '✅';
       margin-right: 8px;
       color: lime;
     }
-
     .price {
       font-size: 1.5em;
       font-weight: bold;
       margin: 20px 0;
     }
-
     #paypal-button-container {
       margin-top: 20px;
     }
-
     .error {
       color: red;
       margin-top: 10px;
@@ -76,34 +66,36 @@
     <div class="error" id="error-message"></div>
   </div>
 
+  <!-- Load PayPal SDK after DOM -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=buttons,funding-eligibility&enable-funding=card&disable-funding=venmo,paylater&currency=USD"></script>
   <script>
-    paypal.Buttons({
-      style: {
-        layout: 'vertical',
-        color: 'gold',
-        shape: 'rect',
-        label: 'paypal'
-      },
-      createOrder: function(data, actions) {
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: '997.00'
-            }
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        return actions.order.capture().then(function(details) {
-          alert('Transaction completed by ' + details.payer.name.given_name);
-          // Redirect or unlock access here
-        });
-      },
-      onError: function(err) {
-        document.getElementById('error-message').textContent = "Something went wrong. Please try again.";
-        console.error(err);
-      }
-    }).render('#paypal-button-container');
+    document.addEventListener("DOMContentLoaded", function () {
+      paypal.Buttons({
+        style: {
+          layout: 'vertical',
+          color: 'gold',
+          shape: 'rect',
+          label: 'paypal'
+        },
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: { value: '997.00' }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            alert('Transaction completed by ' + details.payer.name.given_name);
+            // Redirect to vault access here if needed
+          });
+        },
+        onError: function(err) {
+          document.getElementById('error-message').textContent = "Something went wrong. Please try again.";
+          console.error(err);
+        }
+      }).render('#paypal-button-container');
+    });
   </script>
 </body>
 </html>
