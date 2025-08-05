@@ -3,73 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMJ Digital Vault – Launch Your Business in 48 Hours</title>
+  <title>AMJ Digital Vault – Launch</title>
   <style>
     body {
-      margin: 0;
       padding: 0;
       background: #0a0a0a;
       font-family: 'Segoe UI', sans-serif;
       color: #f4f4f4;
     }
-
     header {
       text-align: center;
       padding: 3rem 1rem;
-      background: linear-gradient(to right, #0fffc1, #00bfff);
+      background: linear-gradient(to right, #111, #222);
     }
-
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
       color: #000;
     }
-
     header p {
       font-size: 1.2rem;
       color: #111;
     }
-
     section {
       padding: 2rem 1.5rem;
       max-width: 900px;
       margin: 0 auto;
     }
-
     .highlight {
       color: #00ffc6;
       font-weight: bold;
     }
-
     .offer {
       background: #1a1a1a;
       padding: 2rem;
       border-radius: 10px;
       margin-top: 2rem;
-      box-shadow: 0 0 10px rgba(0,255,255,0.2);
+      box-shadow: 0 0 10px rgb(0 255 198 / 0.2);
     }
-
     .offer h2 {
       color: #00ffc6;
       font-size: 1.8rem;
     }
-
     .offer ul {
       list-style: none;
       padding-left: 1rem;
     }
-
     .offer ul li::before {
       content: "✅";
       margin-right: 0.5rem;
       color: #00ffc6;
     }
-
     .cta {
       text-align: center;
       margin-top: 2rem;
     }
-
     .cta a {
       background: #00ffc6;
       color: #000;
@@ -80,61 +68,59 @@
       font-size: 1.2rem;
       display: inline-block;
     }
-
     .footer {
       text-align: center;
       color: #666;
       font-size: 0.9rem;
       padding: 3rem 1rem 2rem;
     }
-
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .offer h2 {
-        font-size: 1.5rem;
-      }
-
-      .cta a {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-      }
+      header h1 { font-size: 2rem; }
+      .offer h2 { font-size: 1.5rem; }
+      .cta a { font-size: 1rem; padding: 0.8rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Launch Your Digital Business in 48 Hours</h1>
-    <p>Done-For-You Setup • Automated Funnels • Affiliate Income • No Experience Needed</p>
+    <h1>Launch Your Digital Business</h1>
+    <p>Done-For-You Setup • Automated • No Experience Needed</p>
   </header>
 
   <section>
-    <p>Welcome to <span class="highlight">AMJ Digital Vault</span> — your launchpad to a real online business that runs while you sleep.</p>
-    
+    <p>Welcome to <span class="highlight">AMJ Digital Vault</span> — your launchpad to a real online business.</p>
+
     <div class="offer">
       <h2>The $997 Launch Package Includes:</h2>
       <ul>
-        <li>Done-for-you business setup (site, funnel, products)</li>
-        <li>Automated sales engine with opt-in capture</li>
-        <li>Passive affiliate income system built-in</li>
-        <li>Preloaded digital products + future updates</li>
-        <li>Smart vault access system (works on autopilot)</li>
-        <li>Tools, training, and templates — all included</li>
+        <li>Done-for-you business setup</li>
+        <li>Automated sales engine</li>
+        <li>Passive affiliate income system</li>
+        <li>Preloaded digital products ready to sell</li>
+        <li>Smart vault access system (coming soon)</li>
+        <li>Tools, training, and templates</li>
       </ul>
     </div>
 
     <div class="cta">
-      <a href="#">🔒 Reserve My Spot – $997</a>
-      <p style="margin-top: 1rem; font-size: 0.95rem; color: #aaa;">Don't have funds yet? <a href="mailto:info@amjdigitalvault.com" style="color: #00ffc6;">Contact us</a> or join the early access list.</p>
+      <a href="javascript:void(0)" id="reserve-btn">🔒 Reserve My Spot – $997</a>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: #aaa;">
+        Don't have funds yet? <a href="mailto:help@amjdigitalvault.com" style="color: #00ffc6;">Contact us</a> or join the waitlist.
+      </p>
     </div>
   </section>
 
   <div class="footer">
-    &copy; 2025 AMJ Digital Vault. All rights reserved.
+    &copy; 2025 AMJ Digital Vault
   </div>
+
+  <script>
+    document.getElementById("reserve-btn").addEventListener("click", function(e) {
+      e.preventDefault();
+      alert("Reserved! (This will later trigger your actual action)");
+    });
+  </script>
 
 </body>
 </html>
