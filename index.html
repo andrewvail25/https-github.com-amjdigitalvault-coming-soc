@@ -2,98 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMJ Digital Vault – Launch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMJ Digital Vault</title>
   <style>
     body {
-      padding: 0;
-      background: #0a0a0a;
-      font-family: 'Segoe UI', sans-serif;
-      color: #f4f4f4;
-    }
-    header {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(to right, #111, #222);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #000;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #111;
-    }
-    section {
-      padding: 2rem 1.5rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .highlight {
-      color: #00ffc6;
-      font-weight: bold;
+      background-color: #111;
+      color: #0fffcf;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
     }
     .offer {
-      background: #1a1a1a;
-      padding: 2rem;
+      background-color: #222;
+      padding: 1rem;
       border-radius: 10px;
-      margin-top: 2rem;
-      box-shadow: 0 0 10px rgb(0 255 198 / 0.2);
     }
-    .offer h2 {
-      color: #00ffc6;
-      font-size: 1.8rem;
+    h1, h2 {
+      color: #0fffcf;
     }
-    .offer ul {
+    ul {
       list-style: none;
-      padding-left: 1rem;
+      padding: 0;
     }
-    .offer ul li::before {
-      content: "✅";
-      margin-right: 0.5rem;
-      color: #00ffc6;
+    li {
+      margin: 0.5rem 0;
+    }
+    li::before {
+      content: "✅ ";
+      color: #7fff00;
     }
     .cta {
-      text-align: center;
       margin-top: 2rem;
+      text-align: center;
     }
   </style>
-
-  <!-- PayPal SDK -->
   <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&enable-funding=venmo&currency=USD">
+    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&currency=USD">
   </script>
 </head>
-
 <body>
-  <header>
-    <h1>AMJ Digital Vault</h1>
-    <p><span class="highlight">Turn your notepad into a real online business.</span></p>
-  </header>
 
-  <section>
-    <div class="offer">
-      <h2>The $997 Launch Package Includes:</h2>
-      <ul>
-        <li>Done-for-you business setup</li>
-        <li>Automated sales engine</li>
-        <li>Passive affiliate income system</li>
-        <li>Preloaded digital products ready to sell</li>
-        <li>Smart vault access system (coming soon)</li>
-        <li>Tools, training, and templates</li>
-      </ul>
-    </div>
+  <h1>AMJ Digital Vault</h1>
+  <p>Turn your notepad into a real online business.</p>
 
-    <div class="cta">
-      <!-- PayPal Hosted Button -->
-      <div id="paypal-container-7U7Y7KMG9X8NW"></div>
-      <script>
-        paypal.HostedButtons({
-          hostedButtonId: "7U7Y7KMG9X8NW"
-        }).render("#paypal-container-7U7Y7KMG9X8NW");
-      </script>
-    </div>
-  </section>
+  <div class="offer">
+    <h2>The $997 Launch Package Includes:</h2>
+    <ul>
+      <li>Done-for-you business setup</li>
+      <li>Automated sales engine</li>
+      <li>Passive affiliate income system</li>
+      <li>Preloaded digital products ready to sell</li>
+      <li>Smart vault access system (coming soon)</li>
+      <li>Tools, training, and templates</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div id="paypal-container"></div>
+  </div>
+
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "XC7SGX25U6EGE"
+    }).render("#paypal-container");
+  </script>
+
 </body>
 </html>
