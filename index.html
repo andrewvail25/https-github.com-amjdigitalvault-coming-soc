@@ -1,83 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AMJ Digital Vault</title>
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&currency=USD">
+  </script>
   <style>
     body {
-      margin: 0;
+      background-color: black;
+      color: cyan;
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #00ffff;
-    }
-
-    .container {
-      padding: 2rem;
-      margin: auto;
-      max-width: 600px;
-    }
-
-    h1, h2 {
+      padding: 20px;
       text-align: center;
     }
-
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
     ul {
-      list-style: none;
+      list-style-type: none;
       padding: 0;
+      margin: 20px 0;
     }
-
     li {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-      color: #00ffff;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: cyan;
     }
-
-    li::before {
-      content: '✅ ';
-      color: #adff2f;
+    .green-check {
+      color: #00FF00;
+      margin-right: 8px;
     }
-
     .price {
-      font-size: 1.5rem;
-      text-align: center;
-      margin-top: 1rem;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+      color: cyan;
     }
-
-    #paypal-button-container {
-      margin-top: 2rem;
-      text-align: center;
+    .paypal-container {
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>The $997 Launch Package Includes:</h1>
+  <h1>The $997 Launch Package Includes:</h1>
+  <ul>
+    <li><span class="green-check">✅</span>Done-for-you business setup</li>
+    <li><span class="green-check">✅</span>Automated sales engine</li>
+    <li><span class="green-check">✅</span>Passive affiliate income system</li>
+    <li><span class="green-check">✅</span>Preloaded digital products ready to sell</li>
+    <li><span class="green-check">✅</span>Smart Vault Access System – <span style="color: lime">LIVE NOW</span></li>
+    <li><span class="green-check">✅</span>Tools, training, and templates</li>
+  </ul>
 
-    <ul>
-      <li>Done-for-you business setup</li>
-      <li>Automated sales engine</li>
-      <li>Passive affiliate income system</li>
-      <li>Preloaded digital products ready to sell</li>
-      <li>Smart Vault Access System – <span style="color: lime;">LIVE NOW</span></li>
-      <li>Tools, training, and templates</li>
-    </ul>
+  <div class="price">AMJ DIGITAL VAULT LAUNCH PACKAGE<br>$997.00 USD</div>
 
-    <h2>AMJ DIGITAL VAULT LAUNCH PACKAGE</h2>
-    <div class="price">$997.00 USD</div>
+  <div class="paypal-container" id="paypal-container"></div>
 
-    <div id="paypal-button-container"></div>
-  </div>
-
-  <!-- Move PayPal script to bottom -->
-  <script src="https://www.paypal.com/sdk/js?client-id=AaJWaZGobv1A7yyIkIVBIvGtEVDYrYeWUTHqHBP-LiDxgUEZ3WIC8-hvfxknf8eI2NJJCU8Wbbv3YBnkN&components=hosted-buttons&currency=USD"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      paypal.HostedButtons({
-        hostedButtonId: "XC7SGX25U6EGE"
-      }).render("#paypal-button-container");
-    });
+    paypal.HostedButtons({
+      hostedButtonId: "XFBRVKMKCLE2Y"  // Your real $997 PayPal Button ID
+    }).render("#paypal-container");
   </script>
+
 </body>
 </html>
