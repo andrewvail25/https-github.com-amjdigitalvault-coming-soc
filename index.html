@@ -7,37 +7,63 @@
   <style>
     body {
       background-color: #111;
-      color: #0fffcf;
+      color: #00ffc3;
       font-family: Arial, sans-serif;
+      padding: 20px;
       margin: 0;
-      padding: 2rem;
     }
-    .offer {
-      background-color: #222;
-      padding: 1rem;
+
+    h1 {
+      color: #00ffc3;
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 20px;
+    }
+
+    .package-box {
+      background: #1e1e1e;
+      padding: 20px;
       border-radius: 10px;
+      margin-top: 20px;
     }
-    h1, h2 {
-      color: #0fffcf;
-    }
-    ul {
+
+    .checklist {
       list-style: none;
       padding: 0;
+      color: #00ffc3;
     }
-    li {
-      margin: 0.5rem 0;
+
+    .checklist li {
+      margin-bottom: 10px;
+      font-size: 16px;
     }
-    li::before {
-      content: "✅ ";
-      color: #7fff00;
+
+    .price {
+      font-size: 20px;
+      margin: 20px 0;
     }
-    .cta {
-      margin-top: 2rem;
-      text-align: center;
+
+    .button-wrapper {
+      margin-top: 20px;
+    }
+
+    .payment-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .payment-icons img {
+      height: 28px;
+      margin: 0 6px;
     }
   </style>
+  <!-- PayPal SDK -->
   <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&currency=USD">
+    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&enable-funding=venmo&currency=USD">
   </script>
 </head>
 <body>
@@ -45,27 +71,36 @@
   <h1>AMJ Digital Vault</h1>
   <p>Turn your notepad into a real online business.</p>
 
-  <div class="offer">
+  <div class="package-box">
     <h2>The $997 Launch Package Includes:</h2>
-    <ul>
-      <li>Done-for-you business setup</li>
-      <li>Automated sales engine</li>
-      <li>Passive affiliate income system</li>
-      <li>Preloaded digital products ready to sell</li>
-      <li>Smart vault access system (coming soon)</li>
-      <li>Tools, training, and templates</li>
+    <ul class="checklist">
+      <li>✅ Done-for-you business setup</li>
+      <li>✅ Automated sales engine</li>
+      <li>✅ Passive affiliate income system</li>
+      <li>✅ Preloaded digital products ready to sell</li>
+      <li>✅ Smart Vault Access System — <strong>LIVE NOW</strong></li>
+      <li>✅ Tools, training, and templates</li>
     </ul>
   </div>
 
-  <div class="cta">
-    <div id="paypal-container"></div>
+  <p class="price">AMJ DIGITAL VAULT LAUNCH PACKAGE<br><strong>$997.00 USD</strong></p>
+
+  <div class="button-wrapper">
+    <!-- Actual PayPal Button -->
+    <div id="paypal-container-9ZJKDR8R2JYPG"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "9ZJKDR8R2JYPG"
+      }).render("#paypal-container-9ZJKDR8R2JYPG");
+    </script>
   </div>
 
-  <script>
-    paypal.HostedButtons({
-      hostedButtonId: "XC7SGX25U6EGE"
-    }).render("#paypal-container");
-  </script>
+  <div class="payment-icons">
+    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_74x46.jpg" alt="PayPal" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Generic_credit_card_icon.svg" alt="More" />
+  </div>
 
 </body>
 </html>
