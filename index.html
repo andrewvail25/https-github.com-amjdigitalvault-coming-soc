@@ -54,4 +54,46 @@
       margin-right: 0.5rem;
       color: #00ffc6;
     }
-    .
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+
+  <!-- PayPal SDK -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&enable-funding=venmo&currency=USD">
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>AMJ Digital Vault</h1>
+    <p><span class="highlight">Turn your notepad into a real online business.</span></p>
+  </header>
+
+  <section>
+    <div class="offer">
+      <h2>The $997 Launch Package Includes:</h2>
+      <ul>
+        <li>Done-for-you business setup</li>
+        <li>Automated sales engine</li>
+        <li>Passive affiliate income system</li>
+        <li>Preloaded digital products ready to sell</li>
+        <li>Smart vault access system (coming soon)</li>
+        <li>Tools, training, and templates</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <!-- PayPal Hosted Button -->
+      <div id="paypal-container-7U7Y7KMG9X8NW"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "7U7Y7KMG9X8NW"
+        }).render("#paypal-container-7U7Y7KMG9X8NW");
+      </script>
+    </div>
+  </section>
+</body>
+</html>
