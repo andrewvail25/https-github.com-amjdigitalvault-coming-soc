@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMJ Digital Vault</title>
-  <script 
-    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&currency=USD">
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vault Key License</title>
   <style>
     body {
-      background-color: black;
-      color: cyan;
+      background-color: #000;
+      color: #0ff;
       font-family: Arial, sans-serif;
-      padding: 20px;
+      padding: 2rem;
       text-align: center;
     }
+
     h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #0ff;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-    li {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: cyan;
-    }
-    .green-check {
-      color: #00FF00;
-      margin-right: 8px;
-    }
+
     .price {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 20px;
-      color: cyan;
+      font-size: 1.5rem;
+      margin: 1rem 0;
     }
-    .paypal-container {
-      margin-top: 30px;
+
+    #paypal-button-container {
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+  <h1>Vault Key License</h1>
+  <p class="price">$197.00 USD</p>
 
-  <h1>The $997 Launch Package Includes:</h1>
-  <ul>
-    <li><span class="green-check">✅</span>Done-for-you business setup</li>
-    <li><span class="green-check">✅</span>Automated sales engine</li>
-    <li><span class="green-check">✅</span>Passive affiliate income system</li>
-    <li><span class="green-check">✅</span>Preloaded digital products ready to sell</li>
-    <li><span class="green-check">✅</span>Smart Vault Access System – <span style="color: lime">LIVE NOW</span></li>
-    <li><span class="green-check">✅</span>Tools, training, and templates</li>
-  </ul>
+  <div id="paypal-button-container"></div>
 
-  <div class="price">AMJ DIGITAL VAULT LAUNCH PACKAGE<br>$997.00 USD</div>
-
-  <div class="paypal-container" id="paypal-container"></div>
-
-  <script>
-    paypal.HostedButtons({
-      hostedButtonId: "XFBRVKMKCLE2Y"  // Your real $997 PayPal Button ID
-    }).render("#paypal-container");
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&currency=USD">
   </script>
-
+  <script>
+    paypal.Buttons({
+      style: {
+        layout: 'vertical',
+        color: 'gold',
+        shape: 'rect',
+        label: 'paypal'
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '197.00'
+            },
+            description: "Vault Key License"
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Transaction completed by ' + details.payer.name.given_name);
+          // optional redirect to confirmation/delivery
+          window.location.href = '/thank-you.html';
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>
 </body>
 </html>
