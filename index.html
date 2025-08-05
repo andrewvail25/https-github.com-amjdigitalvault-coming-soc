@@ -18,8 +18,7 @@
       max-width: 600px;
     }
 
-    h1, h2, h3 {
-      color: #00ffff;
+    h1, h2 {
       text-align: center;
     }
 
@@ -49,12 +48,6 @@
       margin-top: 2rem;
       text-align: center;
     }
-
-    @media screen and (max-width: 600px) {
-      .container {
-        padding: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -74,16 +67,17 @@
     <h2>AMJ DIGITAL VAULT LAUNCH PACKAGE</h2>
     <div class="price">$997.00 USD</div>
 
-    <!-- ✅ CORRECT PayPal Button for $997 product -->
     <div id="paypal-button-container"></div>
+  </div>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AaJWaZGobv1A7yyIkIVBIvGtEVDYrYeWUTHqHBP-LiDxgUEZ3WIC8-hvfxknf8eI2NJJCU8Wbbv3YBnkN&components=hosted-buttons&currency=USD"></script>
-    <script>
+  <!-- Move PayPal script to bottom -->
+  <script src="https://www.paypal.com/sdk/js?client-id=AaJWaZGobv1A7yyIkIVBIvGtEVDYrYeWUTHqHBP-LiDxgUEZ3WIC8-hvfxknf8eI2NJJCU8Wbbv3YBnkN&components=hosted-buttons&currency=USD"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
       paypal.HostedButtons({
         hostedButtonId: "XC7SGX25U6EGE"
       }).render("#paypal-button-container");
-    </script>
-  </div>
-
+    });
+  </script>
 </body>
 </html>
