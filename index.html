@@ -1,29 +1,149 @@
-<section style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif; color: #00ffe1; background-color: #000;">
-  <h1 style="font-size: 28px; font-weight: bold; text-align: center; margin-bottom: 10px;">AMJ Digital Vault</h1>
-  <p style="text-align: center; font-size: 16px;">Turn your notepad into a real online business.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMJ Digital Vault</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=buttons&enable-funding=venmo&currency=USD"></script>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ffe0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
 
-  <div style="background-color: #111; padding: 20px; border-radius: 10px; margin-top: 20px;">
-    <h2 style="font-size: 22px; color: #00ffe1; text-align: center; margin-bottom: 20px;">The $997 Launch Package Includes:</h2>
-    <ul style="list-style: none; padding-left: 0; color: white; font-size: 16px;">
-      <li>✅ Done-for-you business setup</li>
-      <li>✅ Automated sales engine</li>
-      <li>✅ Passive affiliate income system</li>
-      <li>✅ Preloaded digital products ready to sell</li>
-      <li>✅ Smart Vault Access System — <span style="color: #00ff33; font-weight: bold;">LIVE NOW</span></li>
-      <li>✅ Tools, training, and templates</li>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ffe0;
+    }
+
+    h1 {
+      color: #00ffe0;
+      text-align: center;
+    }
+
+    .tagline {
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    .package-header {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #00ffe0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    ul li img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .live-now {
+      color: #00ff00;
+      font-weight: bold;
+    }
+
+    .price {
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    #paypal-button-container {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .error {
+      color: #ff4444;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AMJ Digital Vault</h1>
+    <p class="tagline">Turn your notepad into a real online business.</p>
+
+    <div class="package-header">The $997 Launch Package Includes:</div>
+    <ul>
+      <li><img src="https://img.icons8.com/emoji/48/000000/check-mark-emoji.png"/>Done-for-you business setup</li>
+      <li><img src="https://img.icons8.com/emoji/48/000000/check-mark-emoji.png"/>Automated sales engine</li>
+      <li><img src="https://img.icons8.com/emoji/48/000000/check-mark-emoji.png"/>Passive affiliate income system</li>
+      <li><img src="https://img.icons8.com/emoji/48/000000/check-mark-emoji.png"/>Preloaded digital products ready to sell</li>
+      <li><img src="https://img.icons8.com/emoji/48/000000/check-mark-emoji.png"/>Smart Vault Access System — <span class="live-now">LIVE NOW</span></li>
+      <li><img src="https://img.icons8.com/emoji/48/000000/check-mark-emoji.png"/>Tools, training, and templates</li>
     </ul>
+
+    <div class="price">AMJ DIGITAL VAULT LAUNCH PACKAGE<br>$997.00 USD</div>
+
+    <div id="paypal-button-container"></div>
+    <div class="error">⚠️ Something went wrong. Contact the merchant for help.</div>
   </div>
 
-  <h2 style="text-align: center; margin-top: 30px; font-size: 20px; color: #00ffe1;">AMJ DIGITAL VAULT LAUNCH PACKAGE<br>$997.00 USD</h2>
-
-  <!-- PAYPAL BUTTONS -->
-  <div id="paypal-button-container" style="margin-top: 20px;"></div>
-
-  <script src="https://www.paypal.com/sdk/js?client-id=BAA6V7Yi9q3qDKzNdERD9QQY0smgbK4yA61DAEBF-I8keeqkOd5UULsjoVEGhiO3b7sjYU084Ts5K67x2Q&components=hosted-buttons&enable-funding=venmo,paylater,card&currency=USD"></script>
-
   <script>
-    paypal.HostedButtons({
-      hostedButtonId: "E4B8XGSD2C26E"
-    }).render("#paypal-button-container");
+    paypal.Buttons({
+      style: {
+        layout: 'vertical',
+        color:  'gold',
+        shape:  'rect',
+        label:  'paypal'
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '997.00'
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Transaction completed by ' + details.payer.name.given_name + '!');
+        });
+      },
+      onError: function(err) {
+        console.error('PayPal Button Error:', err);
+      }
+    }).render('#paypal-button-container');
   </script>
-</section>
+</body>
+</html>
