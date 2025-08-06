@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$7 – Mini Vault Sample Pack</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .buy-btn {
+      background-color: #635bff;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .buy-btn:hover {
+      background-color: #4a44cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>$7 – Mini Vault Sample Pack</h1>
+    <p>Get instant access to your Mini Vault — a handpicked bundle of powerful digital tools to start your journey.</p>
+    <a class="buy-btn" href="https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00" target="_blank">
+      Buy Now – $7
+    </a>
+  </div>
+</body>
+</html>
