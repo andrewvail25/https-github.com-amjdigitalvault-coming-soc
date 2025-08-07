@@ -3,82 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vault Offers – AMJ Digital Vault</title>
+  <title>AMJ Digital Vault</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
       margin: 0;
       padding: 20px;
-      background-color: #ffffff;
-      color: #000;
-    }
-    h1 {
       text-align: center;
-      margin-bottom: 40px;
     }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .offers {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     .offer {
-      border: 1px solid #ddd;
+      background: #1e293b;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
+
     .offer h2 {
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
+      font-size: 1.5em;
     }
+
     .offer p {
-      margin: 0 0 15px 0;
+      font-size: 1.1em;
+      margin-bottom: 15px;
     }
-    .button {
-      display: inline-block;
+
+    .offer a {
+      background: #38bdf8;
+      color: #0f172a;
       padding: 10px 20px;
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
       border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.2s;
     }
-    .button:hover {
-      background-color: #333;
+
+    .offer a:hover {
+      background: #0ea5e9;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
-  <h1>💼 Vault Offers</h1>
 
-  <div class="offer">
-    <h2>Mini Vault Sample Pack – $7</h2>
-    <p>Get a taste of the Vault with a sample pack of powerful tools.</p>
-    <a class="button" href="https://buy.stripe.com/7sY9AT0x4h1he0je5q" target="_blank">Buy Now</a>
+  <h1>Welcome to AMJ Digital Vault</h1>
+  <p>Choose your path and unlock powerful tools instantly.</p>
+
+  <div class="offers">
+
+    <div class="offer">
+      <h2>Mini Vault Sample Pack</h2>
+      <p>Try a small taste of the Vault. Instant access.</p>
+      <a href="https://buy.stripe.com/7sY9AT0x4h1he0je5q">Grab It – $7</a>
+    </div>
+
+    <div class="offer">
+      <h2>Hustler’s Toolkit</h2>
+      <p>Essential resources for modern digital hustlers.</p>
+      <a href="https://buy.stripe.com/28o3fR2gS6rRbZGcMV">Grab It – $17</a>
+    </div>
+
+    <div class="offer">
+      <h2>Affiliate Magnet Kit</h2>
+      <p>Attract clicks and commissions with this proven pack.</p>
+      <a href="https://buy.stripe.com/3csdTR0x47qF9t2eUZ">Grab It – $27</a>
+    </div>
+
+    <div class="offer">
+      <h2>Fast Stack Starter Vault</h2>
+      <p>Quick-launch bundle to start earning right away.</p>
+      <a href="https://buy.stripe.com/9AQdTR1do7qF6t2fZ1">Grab It – $37</a>
+    </div>
+
+    <div class="offer">
+      <h2>Digital Hustler Quick Launch Pack</h2>
+      <p>Done-for-you systems to launch your online hustle.</p>
+      <a href="https://buy.stripe.com/7sIeVlcWq4eT9t2eUV">Grab It – $97</a>
+    </div>
+
+    <div class="offer">
+      <h2>Vault Launch Package</h2>
+      <p>The full-blown $997 done-for-you system. Ready to go.</p>
+      <a href="https://buy.stripe.com/dR67vR0x47qFbzmcN0">Grab It – $997</a>
+    </div>
+
   </div>
 
-  <div class="offer">
-    <h2>Hustler’s Toolkit – $17</h2>
-    <p>Essential tools to kickstart your side hustle fast.</p>
-    <a class="button" href="https://buy.stripe.com/6oE2bP95Y7zvbZ6288" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="offer">
-    <h2>Affiliate Magnet Kit – $27</h2>
-    <p>Drive affiliate sales and commissions with this ready-to-roll kit.</p>
-    <a class="button" href="https://buy.stripe.com/6oE6qz6Xo2D1dBK28c" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="offer">
-    <h2>Fast Stack Starter Vault – $37</h2>
-    <p>Build momentum fast with this stack of digital money-makers.</p>
-    <a class="button" href="https://buy.stripe.com/8wM8zZ1to4fT8zWaEF" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="offer">
-    <h2>Digital Hustler Quick Launch Pack – $97</h2>
-    <p>Launch your own business online with this quick-start package.</p>
-    <a class="button" href="https://buy.stripe.com/14kaHj0Xo9XFgzm4gk" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="offer">
-    <h2>Vault Launch Package – $997</h2>
-    <p>The complete done-for-you digital business system — ready to roll.</p>
-    <a class="button" href="https://buy.stripe.com/5kA6qz2PY7zvdBKbIL" target="_blank">Buy Now</a>
-  </div>
+  <footer>
+    &copy; 2025 AMJ Digital Vault. All rights reserved.
+  </footer>
 
 </body>
 </html>
