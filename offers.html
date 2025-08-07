@@ -3,107 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Digital Vault Offers</title>
+  <title>Offers | AMJ Digital Vault</title>
   <style>
     body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 2rem;
+      font-family: Arial, sans-serif;
       margin: 0;
+      background: #f4f4f4;
+      color: #333;
     }
-    h1 {
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
       text-align: center;
-      color: #00ffaa;
-      margin-bottom: 2rem;
     }
-    .offers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
-    .card {
-      background-color: #1e1e1e;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    .offer {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      padding: 20px;
     }
-    .card h2 {
-      color: #00ffaa;
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
+    .offer h2 {
+      margin-top: 0;
     }
     .price {
-      font-size: 1.1rem;
+      font-size: 1.2em;
       font-weight: bold;
-      color: #00cc88;
-      margin: 0.5rem 0;
+      color: #1a73e8;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 0.95rem;
-    }
-    ul li::before {
-      content: "✅ ";
-    }
-    a.button {
+    .btn {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #00cc88;
+      background: #1a73e8;
       color: #fff;
-      border-radius: 8px;
+      padding: 10px 18px;
+      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
+      margin-top: 10px;
     }
-    a.button:hover {
-      background-color: #00aa77;
-    }
-    .back {
+    footer {
       text-align: center;
-      margin-top: 3rem;
-    }
-    .back a {
-      color: #aaa;
-      text-decoration: underline;
-      font-size: 0.9rem;
+      padding: 30px 10px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <h1>Choose Your Digital Vault Package</h1>
-  <div class="offers">
-    <div class="card">
-      <h2>💼 Mini Vault Sample Pack</h2>
-      <div class="price">$7 One-Time</div>
-      <ul>
-        <li>Instant unlock of 5 top tools</li>
-        <li>Cheatsheets and templates</li>
-        <li>Lifetime access</li>
-      </ul>
-      <a href="https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00" class="button" target="_blank">Get Access</a>
-    </div>
 
-    <div class="card">
-      <h2>🚀 Vault Launch Package</h2>
-      <div class="price">$997 One-Time</div>
-      <ul>
-        <li>Done-for-you business setup</li>
-        <li>Automated sales engine</li>
-        <li>Passive affiliate system</li>
-        <li>Preloaded digital products</li>
-        <li>Vault access system (coming soon)</li>
-        <li>Tools, training, and templates</li>
-      </ul>
-      <a href="https://buy.stripe.com/5kA5nP2cG1v91m09AD" class="button" target="_blank">Launch Now</a>
-    </div>
+<header>
+  <h1>All Offers – AMJ Digital Vault</h1>
+</header>
+
+<div class="container">
+
+  <!-- $7 -->
+  <div class="offer">
+    <h2>Mini Vault Sample Pack</h2>
+    <p class="price">$7</p>
+    <p>5 powerful tools, templates, and cheatsheets to kickstart your journey. Instant access.</p>
+    <a class="btn" href="https://buy.stripe.com/7sY9AT0x4h1he0je5q3ks00">Buy Now</a>
   </div>
 
-  <div class="back">
-    <a href="index.html">← Back to Vault Entry</a>
+  <!-- $17 -->
+  <div class="offer">
+    <h2>Hustler’s Toolkit</h2>
+    <p class="price">$17</p>
+    <p>10+ digital business templates, AI prompts, and a Quickstart PDF planner.</p>
+    <a class="btn" href="https://buy.stripe.com/6oU7sLcfMh1hbSb6CY3ks01">Buy Now</a>
   </div>
+
+  <!-- $27 -->
+  <div class="offer">
+    <h2>Affiliate Magnet Kit</h2>
+    <p class="price">$27</p>
+    <p>Top 20 affiliate programs, swipe files, and auto-promo scripts for fast income stacking.</p>
+    <a class="btn" href="https://buy.stripe.com/9B6dR96Vs12j6xR4uQ3ks02">Buy Now</a>
+  </div>
+
+  <!-- $47 -->
+  <div class="offer">
+    <h2>Fast Stack Starter Vault</h2>
+    <p class="price">$47</p>
+    <p>Editable digital business files, 3 pre-written offers, and Canva promo assets ready to go.</p>
+    <a class="btn" href="https://buy.stripe.com/4gM8wPenU8uL4pJ2mI3ks03">Buy Now</a>
+  </div>
+
+  <!-- $97 -->
+  <div class="offer">
+    <h2>Digital Hustler Quick Launch Pack</h2>
+    <p class="price">$97</p>
+    <p>Includes everything in $47 plus a funnel template, vault engine (lite), 7-day challenge, and bonus email sequence.</p>
+    <a class="btn" href="https://buy.stripe.com/8x214n4Nk26naO77H23ks04">Buy Now</a>
+  </div>
+
+  <!-- $997 -->
+  <div class="offer">
+    <h2>Vault Launch Package</h2>
+    <p class="price">$997</p>
+    <p>Done-for-you digital business system with prebuilt offers, funnel stack, automation, affiliate system, and Vault Engine.</p>
+    <a class="btn" href="https://buy.stripe.com/6oUbJ13JgeT9cWfe5q3ks05">Buy Now</a>
+  </div>
+
+  <!-- $2500+ (hidden for now) -->
+  <!--
+  <div class="offer">
+    <h2>Private Invite-Only Funnel</h2>
+    <p class="price">Starts at $2,500+</p>
+    <p>High-ticket, done-for-you system for serious players only. Includes custom scaling blueprint, full service setup, and private 1:1 consultation.</p>
+    <a class="btn" href="https://buy.stripe.com/EXAMPLELINK">Request Access</a>
+  </div>
+  -->
+
+</div>
+
+<footer>
+  &copy; 2025 AMJ Digital Vault. All rights reserved.
+</footer>
+
 </body>
 </html>
